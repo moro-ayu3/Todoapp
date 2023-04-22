@@ -13,29 +13,9 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-      $param = [
-        'name' => '家事',
-      ];
-      Tag::create($param);
-
-      $param = [
-        'name' => '勉強',
-      ];
-      Tag::create($param);
-
-      $param = [
-        'name' => '運動',
-      ];
-      Tag::create($param);
-
-      $param =[
-        'name' => '食事',
-      ];
-      Tag::create($param);
-
-      $param =[
-        'name' => '移動',
-      ];
-      Tag::create($param);
+      $names = ['家事', '勉強', '運動', '食事', '移動'];
+        foreach ($names as $name) {
+        Tag::create(['name' => $name]);
+        }
     }
 }

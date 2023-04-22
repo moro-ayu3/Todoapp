@@ -13,10 +13,6 @@ class TodosTableSeeder extends Seeder
      */
     public function run()
     {
-      $param = [
-        'content' => 'テスト',
-        'tag_id' => '1',
-      ];
-      Todo::create($param);
+      Todo::factory()->create();
     }
 }
