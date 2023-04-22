@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\MOdels\Todo;
 use Illuminate\Http\Request;
+use App\Models\Todo;
+use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\TodoRequest;
 
 class TodoController extends Controller
 {
