@@ -31,7 +31,6 @@ class TodoController extends Controller
   {
         $user = Auth::user();
         $todo = Todo::find($request->id);
-        if($todo->user->id !== $user->id) return back();
         $form = $this->unsetToken($request);
         $todo->fill($form)->save();
         return back();
@@ -40,7 +39,6 @@ class TodoController extends Controller
     {
         $user = Auth::user();
         $todo = Todo::find($request->id);
-        if ($todo->user_id !== $user->id) return back();
         $todo->delete();
         return back();
     }
